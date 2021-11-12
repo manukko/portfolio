@@ -1,0 +1,32 @@
+.navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(13, 166, 236, 0.8) !important;
+}
+
+.navbar {
+    background-color: rgb(228, 238, 253) !important;
+    border-color: rgb(20, 24, 31) !important;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(249, 251, 253) !important;
+}
+
+
+#blogtitle {
+    font-size: 5rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 3rem;
+    }
+    #blogdetailtitle {
+        font-size: 4rem;
+    }
+}
