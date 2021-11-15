@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-bolg4gld3q63h($1a=%-bm$gbh*ogd@4@otjtlfy(-h7^hx0!x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'manukko.pythonanywhere.com']
+ALLOWED_HOSTS = ['manukko.pythonanywhere.com']
 
 
 # Application definition
@@ -134,3 +134,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from .local_settings import *
+    print(f"local file found... Debugging phase, debug={DEBUG}")
+
+except ImportError:
+    print(f"looks like no local file. You must be on production... debug={DEBUG}")
+
